@@ -6,8 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Editor</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <h1>TextEditor</h1>
+    <div id=buttons>
+        <button type="button">Bold</button>
+        <button type="button">Italic</button>
+        <button type="button">Underline</button>
+        <button type="button">Justify Left</button>
+        <button type="button">Center</button>
+        <button type="button">Justify Right</button>
+    </div>
+
+    <hr>
+    
+    <label for="userText">Your Document Text</label>
+    <input type="text" id="userText" placeholder="Enter text here">
+
+    <label for="formattedText">Formatted Text</label>
+    <input type="text" id="formattedText">
+
     <script src="script.js"></script>
 </body>
 </html>
