@@ -25,8 +25,34 @@ function changeColor() {
 
 // function to change the formatting of the content of the formatted text textarea
 function changeFormatting() {
-    // let format = document.getElementById(this.id);
-    // console.log(this.id);
+
+    let textFormatted = document.getElementById('formattedText');
+    let lJustify = document.getElementById('justify-left');
+    let cJustify = document.getElementById('center');
+    let rJustify = document.getElementById('justify-right');
+
+    if (this.id === 'bold') {
+        textFormatted.classList.toggle('bold');
+    } else if (this.id === 'italic') {
+        textFormatted.classList.toggle('italic');
+    } else if (this.id === 'underline') {
+        textFormatted.classList.toggle('underline');
+    } else if (this.id === 'justify-left') {
+        textFormatted.classList.toggle('justify-left');
+        cJustify.classList.remove('active-color');
+        rJustify.classList.remove('active-color');
+        textFormatted.classList.remove('justify-center', 'justify-right');
+    } else if (this.id === 'center') {
+        textFormatted.classList.toggle('justify-center');
+        lJustify.classList.remove('active-color');
+        rJustify.classList.remove('active-color');
+        textFormatted.classList.remove('justify-left', 'justify-right');
+    } else {
+        textFormatted.classList.toggle('justify-right');
+        lJustify.classList.remove('active-color');
+        cJustify.classList.remove('active-color');
+        textFormatted.classList.remove('justify-left', 'justify-center');
+    }
 }
 
 /**
